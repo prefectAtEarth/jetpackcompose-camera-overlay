@@ -3,10 +3,9 @@ package com.github.prefectAtEarth.snippets.camerafocusoverlay
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.github.prefectAtEarth.snippets.camerafocusoverlay.ui.camera.CameraScreen
 import com.github.prefectAtEarth.snippets.camerafocusoverlay.ui.theme.CameraFocusOverlayTheme
@@ -16,7 +15,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             CameraFocusOverlayTheme {
-
+                CameraScreen(modifier = Modifier.fillMaxSize())
             }
         }
     }
@@ -26,6 +25,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DefaultPreview() {
     CameraFocusOverlayTheme {
-        CameraScreen()
+        CameraScreen(modifier = Modifier.fillMaxSize())
     }
 }
