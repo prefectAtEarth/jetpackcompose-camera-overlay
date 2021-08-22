@@ -87,7 +87,7 @@ fun GraphicOverlay(
                     scannerOverlayGraphic.focusBorderHeight
                 )
         ) {
-            drawRoundRect(color = Color.Red, style = stroke)
+            drawRoundRect(color = scannerOverlayGraphic.focusBorderColor, style = stroke)
         }
     }
 }
